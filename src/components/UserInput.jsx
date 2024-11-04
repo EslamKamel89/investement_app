@@ -1,4 +1,4 @@
-
+import { pr } from '../pr';
 export function UserInput({ userInput, setUserInput }) {
     // const [userInput, setUserInput] = useState({
     //     intialInvestment: 1000,
@@ -6,6 +6,7 @@ export function UserInput({ userInput, setUserInput }) {
     //     expectedReturn: 6,
     //     duration: 10,
     // });
+    pr('UserInput rebuild');
     function handleChange(inputIdentifier, newValue) {
         setUserInput((prevInput) => {
             return {

@@ -1,10 +1,11 @@
 import { pr } from '../pr';
 import { calculateInvestmentResults, formatter } from '../util/investment';
 export default function Results({ userInput }) {
+    pr('Resutls rebuild');
     const results = calculateInvestmentResults(userInput);
     const initialInvestment = results[0].valueEndOfYear - results[0].interest - results[0].annaulInvestment;
-    pr(userInput);
-    pr(results);
+    // pr(userInput);
+    // pr(results);
 
     return <table id='result'>
         <thead>
