@@ -1,16 +1,16 @@
-import { useState } from 'react';
-export function UserInput() {
-    const [userInput, setUserInput] = useState({
-        intialInvestment: 1000,
-        annaulInvestment: 1200,
-        expectedReturn: 6,
-        duration: 10,
-    });
+
+export function UserInput({ userInput, setUserInput }) {
+    // const [userInput, setUserInput] = useState({
+    //     intialInvestment: 1000,
+    //     annaulInvestment: 1200,
+    //     expectedReturn: 6,
+    //     duration: 10,
+    // });
     function handleChange(inputIdentifier, newValue) {
         setUserInput((prevInput) => {
             return {
                 ...prevInput,
-                [inputIdentifier]: newValue,
+                [inputIdentifier]: +newValue,
             };
         });
     }
